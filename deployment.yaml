@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hodr-container
-        image: niket50/hodr:34
+        image: niket50/hodr:37
         ports:
         - containerPort: 8080
         envFrom:
@@ -84,7 +84,7 @@ spec:
               service:
                 name: hodr-svc
                 port:
-                  number: 8080
+                  number: 80
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
