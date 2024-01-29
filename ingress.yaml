@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: hodr
+  name: hodr
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: ec2-65-2-186-48.ap-south-1.compute.amazonaws.com
+      http:
+        paths:
+          - path: /hodr/*
+            pathType: Prefix
+            backend:
+              service:
+                name: hodr-svc
+                port:
+                  number: 8080
+
+
+
+
+      

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: hodr
+  name: env-hodr
+data:
+  HOST_ADDR: "localhost:8080"

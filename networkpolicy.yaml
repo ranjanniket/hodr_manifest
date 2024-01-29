@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: hodr-allow
+spec:
+  podSelector:
+    matchLabels:
+      app: hodr
+  policyTypes:
+  - Ingress
+  ingress:
+    - from:
+       - podSelector:
+          matchLabels:
+            app: bran
+
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-all
+spec:
+  podSelector:
+    matchLabels:
+      app: hodr
+  policyTypes:
+  - Ingress
