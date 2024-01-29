@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hodr-container
-        image: niket50/hodr:37
+        image: niket50/hodr:77
         ports:
         - containerPort: 8080
         envFrom:
